@@ -19,8 +19,8 @@ class TPQueue {
     return item;
   }
 
-public:
-  TPQueue(){
+ public:
+  TPQueue() {
     head = tail = nullptr;
     current = nullptr;
   }
@@ -30,7 +30,7 @@ public:
     }
   }
 
-  bool isEmpty() const{
+  bool isEmpty() const {
     return !head;
   }
   void addTail(const T& value) {
@@ -60,11 +60,13 @@ public:
       }
       T value = head->value;
       delete head;
-      head = temp;      
+      head = temp;
       if (!head) {
         tail = nullptr;
       }
       return value;
+    } else {
+     throw "111";
     }
   }
 
