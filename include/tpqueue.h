@@ -4,7 +4,7 @@
 
 template<typename T>
 class TPQueue {
-   private:
+ private:
    struct ITEM {
      T value;
      ITEM *next;
@@ -18,6 +18,7 @@ class TPQueue {
      item->prev = nullptr;
      return item;
    }
+   
  public:
    TPQueue(){
      head = tail = nullptr;
@@ -64,6 +65,7 @@ class TPQueue {
      }
      if (!head) {
        tail = nullptr;
+       return tail;
      }
    }
 
